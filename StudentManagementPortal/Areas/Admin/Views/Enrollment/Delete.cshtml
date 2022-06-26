@@ -1,0 +1,35 @@
+﻿@model Enrollment
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<div>
+    <h4>Enrollment</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Course)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Course.courseName)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Student)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Student.Name)
+        </dd>
+    </dl>
+    
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="Id" />
+          <button type="submit" class="btn btn-primary">Delete</button>
+        <a asp-controller="Enrollment" asp-action="Index" class="btn btn-secondary">Back to Homepage</a>
+    </form>
+</div>
+
+
+
+    
+
+           
